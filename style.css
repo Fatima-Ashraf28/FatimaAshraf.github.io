@@ -12,7 +12,8 @@ body {
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 20px 40px;
+    align-items: center;
+    padding: 15px 40px;
     background: white;
     position: fixed;
     width: 100%;
@@ -33,7 +34,10 @@ nav .logo span {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 25px;
+    gap: 20px;
+    flex-wrap: wrap; /* Allows wrapping on small screens */
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li a {
@@ -45,6 +49,22 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #0078ff;
+}
+
+/* Social Icons in Navbar */
+nav .social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+nav .social-icons a img {
+    width: 25px;
+    height: 25px;
+    transition: 0.3s;
+}
+
+nav .social-icons a img:hover {
+    transform: scale(1.2);
 }
 
 /* Hero Section */
@@ -142,9 +162,36 @@ section {
     text-decoration: underline;
 }
 
+/* Footer */
 footer {
     text-align: center;
     padding: 20px;
     background: #333;
     color: white;
+}
+
+/* Responsive for small screens */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    nav .social-icons {
+        justify-content: center;
+    }
+
+    .project-box {
+        width: 90%;
+    }
+
+    section {
+        padding: 60px 20px;
+    }
 }
