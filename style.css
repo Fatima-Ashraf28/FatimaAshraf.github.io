@@ -1,10 +1,11 @@
 /* General Page Styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
     background: #f4f5f7;
+    color: #333;
 }
 
 /* Navigation */
@@ -17,6 +18,7 @@ nav {
     width: 100%;
     top: 0;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 100;
 }
 
 nav .logo {
@@ -38,6 +40,7 @@ nav ul li a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 nav ul li a:hover {
@@ -68,6 +71,7 @@ nav ul li a:hover {
     font-size: 16px;
     border-radius: 6px;
     margin-top: 15px;
+    transition: 0.3s;
 }
 
 .btn:hover {
@@ -80,6 +84,7 @@ section {
     text-align: center;
 }
 
+/* Skills */
 .skills .skill-list {
     display: flex;
     flex-wrap: wrap;
@@ -94,24 +99,49 @@ section {
     padding: 10px 20px;
     border-radius: 20px;
     font-weight: bold;
+    transition: 0.3s;
+}
+
+.skill-list span:hover {
+    background: #005fcc;
 }
 
 /* Projects */
 .project-box {
     background: white;
-    padding: 20px;
+    padding: 25px;
     margin: 20px auto;
     width: 70%;
-    border-radius: 10px;
+    border-radius: 12px;
     box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project-box:hover {
     transform: translateY(-5px);
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.2);
+}
+
+.project-box a {
+    text-decoration: none;
+    color: #0078ff;
+    font-weight: bold;
+}
+
+.project-box a:hover {
+    color: #005fcc;
 }
 
 /* Contact */
+.contact a {
+    color: #0078ff;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
 footer {
     text-align: center;
     padding: 20px;
