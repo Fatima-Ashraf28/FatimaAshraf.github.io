@@ -20,6 +20,7 @@ nav {
     top: 0;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     z-index: 100;
+    flex-wrap: wrap; /* Wrap navbar items on small screens */
 }
 
 nav .logo {
@@ -35,7 +36,7 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
-    flex-wrap: wrap; /* Allows wrapping on small screens */
+    flex-wrap: wrap; /* Allows wrapping */
     margin: 0;
     padding: 0;
 }
@@ -45,6 +46,7 @@ nav ul li a {
     color: #333;
     font-weight: bold;
     transition: 0.3s;
+    white-space: nowrap; /* Prevent breaking */
 }
 
 nav ul li a:hover {
@@ -100,8 +102,9 @@ nav .social-icons a img:hover {
 
 /* Sections */
 section {
-    padding: 100px 60px;
+    padding: 120px 60px; /* increased padding to avoid hidden under navbar */
     text-align: center;
+    scroll-margin-top: 80px; /* offset for fixed navbar */
 }
 
 /* Skills */
@@ -152,7 +155,17 @@ section {
     color: #005fcc;
 }
 
-/* Contact */
+/* Contact Section */
+.contact {
+    background: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 12px;
+    width: 70%;
+    margin: 0 auto 50px auto;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+}
+
 .contact a {
     color: #0078ff;
     text-decoration: none;
@@ -160,6 +173,24 @@ section {
 
 .contact a:hover {
     text-decoration: underline;
+    color: #005fcc;
+}
+
+.contact-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-icons a {
+    font-size: 24px;
+    color: #0078ff;
+    transition: 0.3s;
+}
+
+.contact-icons a:hover {
+    color: #005fcc;
 }
 
 /* Footer */
@@ -187,11 +218,11 @@ footer {
         justify-content: center;
     }
 
-    .project-box {
+    .project-box, .contact {
         width: 90%;
     }
 
     section {
-        padding: 60px 20px;
+        padding: 80px 20px;
     }
 }
